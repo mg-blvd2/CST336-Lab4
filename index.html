@@ -4,36 +4,89 @@
     <meta charset="utf-8">
     <title> Sign Up Page </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="type/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
-  <body class="text-center">
-    <h1 class="jumbotron"> Sign Up </h1>
+  <body>
+    <h1 class="jumbotron bg-primary text-white"> Sign Up </h1>
 
     <form id="signupForm" method="get" action="welcome.html">
-      First Name: <input type="text" name="fName"><br>
-      Last Name:  <input type="text" name="lName"><br>
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">First Name:</span>
+        </div>
+        <input type="text" name="fName" class="text-white bg-dark"><br>
+
+      </div>
+
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">Last Name:</span>
+        </div>
+        <input type="text" name="lName" class="text-white bg-dark"><br>
+
+      </div>
+
       Gender:     <input type="radio" name="gender" value="m"> Male
                   <input type="radio" name="gender" value="f"> Female <br><br>
 
-      Zip Code    <input type="text" name="zip" id="zip"><br>
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">Zip Code:</span>
+        </div>
+        <input type="text" name="zip" id="zip" class="text-white bg-dark"><br>
+
+      </div>
       City:       <span id="city"></span><br>
       Latitude:   <span id="latitude"></span><br>
       Longitude:  <span id="longitude"></span><br><br>
 
-      State:
-      <select id="state" name="state">
-      </select> <br />
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text bg-secondary text-white" for="state">State</label>
+        </div>
+        <select class="custom-select text-white bg-dark" id="state" name="state">
+        </select>
+      </div>
 
-      Select a County: <select id="county"></select><br><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text bg-secondary text-white" for="county">County</label>
+        </div>
+        <select class="custom-select text-white bg-dark" id="county" name="county">
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">Username:</span>
+        </div>
+        <input type="text" name="username" id="username" class="text-white bg-dark"><br>
+        <span id="usernameError"></span><br>
+      </div>
 
-      Desired Username: <input type="text" id="username" name="username">
-                        <span id="usernameError"></span><br>
-      Password:         <input type="password" id="password" name="password"><br>
-      Password Again:   <input type="password" id="passwordAgain"><br>
-                        <span id="passwordAgainError"></span><br>
 
-      <input type="submit" value="Sign up!">
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">Password:</span>
+        </div>
+        <input type="password" name="password" id="password" class="text-white bg-dark"><br>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class"input-group-prepend">
+          <span class="input-group-text bg-secondary text-white" class="basic-addon1">Re-Enter Password:</span>
+        </div>
+        <input type="password" name="passwordAgain" id="passwordAgain" class="text-white bg-dark"><br>
+        <span id="passwordAgainError"></span><br>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary bg-warning text-dark" type="submit">Sign Up!</button>
+        </div>
+      </div>
+
     </form>
     <script>
 
